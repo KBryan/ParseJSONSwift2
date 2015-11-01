@@ -14,13 +14,33 @@ class PokemonViewControllerDC: UIViewController {
     
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var myPokemonName: UILabel!
-
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var tyoeLbl: UILabel!
+    
+    @IBOutlet weak var defenseLbl: UILabel!
+    
+    @IBOutlet weak var heightLbl: UILabel!
+    
+    @IBOutlet weak var podexLbl: UILabel!
+    @IBOutlet weak var weightLbl: UILabel!
+    @IBOutlet weak var baseAttackLbl: UILabel!
+    
+    @IBOutlet weak var nextEvoImg: UIImageView!
+    @IBOutlet weak var currentEvoImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         pokemonName.text = pokemon.name
+        mainImage.image = UIImage(named: "\(pokemon.pokedexID)")
+        pokemon.downloadPokemonDetails { () -> () in
+            // this will be called after download is completed
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
