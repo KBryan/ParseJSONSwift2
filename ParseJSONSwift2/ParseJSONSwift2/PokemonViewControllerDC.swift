@@ -29,18 +29,44 @@ class PokemonViewControllerDC: UIViewController {
     
     @IBOutlet weak var nextEvoImg: UIImageView!
     @IBOutlet weak var currentEvoImg: UIImageView!
+    
+    @IBAction func disMissButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         pokemonName.text = pokemon.name
-        mainImage.image = UIImage(named: "\(pokemon.pokedexID)")
+        let img = UIImage(named: "\(pokemon.pokedexID)")
+        mainImage.image = img
         pokemon.downloadPokemonDetails { () -> () in
             // this will be called after download is completed
-            
+            self.upDateUI()
         }
         
+    }
+    func upDateUI() {
+        descriptionLabel.text = pokemon.description
+        tyoeLbl.text = pokemon.type
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        podexLbl.text = "\(pokemon.pokedexID)"
+        if pokemon.nextEvolutionId == "" {
+            print("No Evolution Available")
+            nextEvoImg.hidden = true
+        } else {
+            nextEvoImg.hidden = false
+            nextEvoImg.image = UIImage(named: pokemon.nextEvolutionId)
+            var str = "Next Evolution: \(pokemon.nextEvolutionTxt)"
+            
+            if pokemon.nextEvolutionLevel != "" {
+                str += " - LVL \(pokemon.nextEvolutionLevel)"
+            }
+
+        }
     }
 
     override func didReceiveMemoryWarning() {

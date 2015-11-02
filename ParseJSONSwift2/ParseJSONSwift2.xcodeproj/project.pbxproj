@@ -24,7 +24,6 @@
 		78810F8C1BE6709F0006E150 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 78810F8B1BE6709F0006E150 /* music.png */; };
 		78810F901BE681240006E150 /* PokemonViewControllerDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810F8F1BE681240006E150 /* PokemonViewControllerDC.swift */; };
 		879E09046E3BF8D09CE9384D /* Pods_ParseJSONSwift2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612CA06FD33631B37ED1AB5C /* Pods_ParseJSONSwift2.framework */; };
-		C9AAF1E69CAF08BD2460C381 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5B6A209F0EEBCAF7D8D196 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D5B6A209F0EEBCAF7D8D196 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E25984D7382B3F0F7C8C999 /* Pods-ParseJSONSwift2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseJSONSwift2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseJSONSwift2/Pods-ParseJSONSwift2.debug.xcconfig"; sourceTree = "<group>"; };
 		612CA06FD33631B37ED1AB5C /* Pods_ParseJSONSwift2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseJSONSwift2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7867BFEA1BE6A42D00B4EFA5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9AAF1E69CAF08BD2460C381 /* Pods.framework in Frameworks */,
 				879E09046E3BF8D09CE9384D /* Pods_ParseJSONSwift2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +211,6 @@
 		884AF871BE8E139297607691 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D5B6A209F0EEBCAF7D8D196 /* Pods.framework */,
 				612CA06FD33631B37ED1AB5C /* Pods_ParseJSONSwift2.framework */,
 			);
 			name = Frameworks;
