@@ -53,6 +53,7 @@ class PokemonViewControllerDC: UIViewController {
         tyoeLbl.text = pokemon.type
         defenseLbl.text = pokemon.defense
         heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weight
         podexLbl.text = "\(pokemon.pokedexID)"
         if pokemon.nextEvolutionId == "" {
             print("No Evolution Available")

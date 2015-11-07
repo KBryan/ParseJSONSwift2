@@ -101,7 +101,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             poke = pokemon[indexPath.row]
         }
         print(poke.name)
-      performSegueWithIdentifier("pokemonVCDC", sender:(poke as Pokemon) as? AnyObject)
+      performSegueWithIdentifier("pokemonVCDC", sender:poke)
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //

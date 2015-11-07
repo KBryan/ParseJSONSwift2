@@ -106,11 +106,20 @@ class Pokemon {
         }
     }
     var name:String {
-        
-        return _name
+        get {
+            if _name == nil {
+                _name = ""
+            }
+            return _name
+        }
     }
     var pokedexID:Int {
-        return _pokedexID
+        get {
+            if _pokedexID == nil {
+                _pokedexID = 0
+            }
+            return _pokedexID
+        }
     }
     init(name:String,pokedexID:Int) {
         self._name = name
@@ -179,17 +188,12 @@ class Pokemon {
                                     if let lvl = evolutions[0]["level"] as? Int {
                                         self._nextEvolutionLevel = "\(lvl)"
                                     }
-                                    print(self._nextEvolutionLevel)
-                                    print(self._nextEvolutionTxt)
-                                    print(self._nextEvolutionId)
-                                    
                                 }
                             }
                         }
                     }
-                
+                }
             }
         }
     }
-}
 }
